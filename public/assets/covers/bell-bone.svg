@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="presentation">
+  <rect width="400" height="600" fill="#1d1f24"/>
+  
+  <rect width="400" height="600" fill="#1d1f24"/>
+  <!-- headstock -->
+  <rect x="176" y="86" width="48" height="26" fill="#6d5f45"/>
+  <!-- bell body -->
+  <path d="M200 112
+           C150 112 132 176 126 250
+           C122 300 112 340 100 366
+           L300 366
+           C288 340 278 300 274 250
+           C268 176 250 112 200 112 Z"
+        fill="#9d8a5c" stroke="#6d5f45" stroke-width="3"/>
+  <rect x="96" y="366" width="208" height="20" rx="6" fill="#8a784f" stroke="#6d5f45" stroke-width="3"/>
+  <!-- the crack -->
+  <path d="M232 150 L214 214 L246 250 L212 300 L240 386"
+        fill="none" stroke="#1d1f24" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M214 214 L188 236" fill="none" stroke="#1d1f24" stroke-width="4"/>
+  <!-- clapper -->
+  <rect x="196" y="386" width="8" height="30" fill="#6d5f45"/>
+  <circle cx="200" cy="424" r="14" fill="#6d5f45"/>
+
+  <text x="200" y="500" font-family="Georgia, serif" font-size="34" fill="#ffffff"
+        text-anchor="middle">Bell and Bone</text>
+  <text x="200" y="536" font-family="Georgia, serif" font-size="20" fill="#ffffff"
+        opacity="0.85" text-anchor="middle">Cormac Deasy</text>
+</svg>

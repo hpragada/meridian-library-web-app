@@ -1,0 +1,24 @@
+<p class="lede">Items issued on your card, including those already dealt with.</p>
+
+<ul class="legend" id="loans-legend">
+  <li><span class="swatch swatch-overdue"></span> Overdue</li>
+  <li><span class="swatch swatch-due-soon"></span> Due soon</li>
+  <li><span class="swatch swatch-on-loan"></span> On loan</li>
+</ul>
+
+<table id="loans-table">
+  <thead>
+    <tr><th scope="col">Title</th><th scope="col">Due</th><th scope="col">Status</th></tr>
+  </thead>
+  <tbody>
+<% loanRows.forEach(function (l) { %>
+    <tr class="row-<%= l.status %>">
+      <td><%= l.title %></td>
+      <td><%= l.dueLabel %></td>
+      <td><span class="badge"><%= l.statusLabel %></span></td>
+    </tr>
+<% }); %>
+  </tbody>
+</table>
+
+<p class="muted">Renew online up to two times, or ask staff at any branch.</p>

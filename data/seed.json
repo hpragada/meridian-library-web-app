@@ -1,0 +1,482 @@
+{
+  "_note": "Fixed catalogue data. Never randomise and never compute from the current date - the same URL must return identical HTML on every request. The long listing pages are generated from the arrays below rather than hand-written, so their counts cannot drift out of step with the data.",
+  "books": [
+    {
+      "id": "tidewater",
+      "title": "Tidewater",
+      "author": "Ursula Vane",
+      "depicts": "a flooded harbour at dusk",
+      "genre": "Literary fiction",
+      "shelf": "F VAN"
+    },
+    {
+      "id": "salt-path",
+      "title": "The Salt Path Home",
+      "author": "Idris Okonkwo",
+      "depicts": "a dirt road through wheat fields",
+      "genre": "Travel writing",
+      "shelf": "914 OKO"
+    },
+    {
+      "id": "nightjar",
+      "title": "Nightjar",
+      "author": "Marta Lindqvist",
+      "depicts": "a single bird against a full moon",
+      "genre": "Nature writing",
+      "shelf": "598 LIN"
+    },
+    {
+      "id": "cartographer",
+      "title": "The Cartographer's Apprentice",
+      "author": "Hana Sato",
+      "depicts": "a hand-drawn map with a compass rose",
+      "genre": "Historical fiction",
+      "shelf": "F SAT"
+    },
+    {
+      "id": "bell-bone",
+      "title": "Bell and Bone",
+      "author": "Cormac Deasy",
+      "depicts": "a cracked church bell",
+      "genre": "Crime",
+      "shelf": "F DEA"
+    },
+    {
+      "id": "quiet-inventory",
+      "title": "A Quiet Inventory",
+      "author": "Priya Raghunathan",
+      "depicts": "stacked cardboard boxes in an empty room",
+      "genre": "Poetry",
+      "shelf": "821 RAG"
+    }
+  ],
+  "moreBooks": [
+    {
+      "id": "winter-orchard",
+      "title": "The Winter Orchard",
+      "author": "Nell Ferrier",
+      "depicts": "bare fruit trees under snow",
+      "genre": "Literary fiction",
+      "shelf": "F FER",
+      "altStyle": "cover"
+    },
+    {
+      "id": "long-field",
+      "title": "Long Field",
+      "author": "Owen Traske",
+      "depicts": "a ploughed field meeting the sky",
+      "genre": "Literary fiction",
+      "shelf": "F TRA",
+      "altStyle": "book cover image"
+    },
+    {
+      "id": "paper-boats",
+      "title": "Paper Boats",
+      "author": "Ines Moreau",
+      "depicts": "folded paper boats on still water",
+      "genre": "Poetry",
+      "shelf": "841 MOR",
+      "altStyle": "paper-boats.svg"
+    },
+    {
+      "id": "red-kite",
+      "title": "Red Kite",
+      "author": "Dafydd Hallam",
+      "depicts": "a bird of prey circling above a valley",
+      "genre": "Nature writing",
+      "shelf": "598 HAL",
+      "altStyle": "photo"
+    },
+    {
+      "id": "signal-box",
+      "title": "The Signal Box",
+      "author": "Ruth Anwyl",
+      "depicts": "a railway signal box beside empty tracks",
+      "genre": "Crime",
+      "shelf": "F ANW",
+      "altStyle": "Red Kite"
+    },
+    {
+      "id": "almanac",
+      "title": "The Coastal Almanac",
+      "author": "Sena Karadeniz",
+      "depicts": "a tide table beside a lighthouse",
+      "genre": "Reference",
+      "shelf": "551 KAR",
+      "altStyle": ""
+    }
+  ],
+  "loans": [
+    {
+      "bookId": "tidewater",
+      "due": "2026-07-02",
+      "dueLabel": "2 July 2026",
+      "status": "overdue",
+      "statusLabel": "Overdue"
+    },
+    {
+      "bookId": "nightjar",
+      "due": "2026-08-19",
+      "dueLabel": "19 August 2026",
+      "status": "due-soon",
+      "statusLabel": "Due soon"
+    },
+    {
+      "bookId": "bell-bone",
+      "due": "2026-09-30",
+      "dueLabel": "30 September 2026",
+      "status": "on-loan",
+      "statusLabel": "On loan"
+    }
+  ],
+  "loanHistory": [
+    {
+      "title": "Tidewater",
+      "borrowed": "4 March 2026",
+      "returned": "22 March 2026"
+    },
+    {
+      "title": "The Salt Path Home",
+      "borrowed": "22 March 2026",
+      "returned": "9 April 2026"
+    },
+    {
+      "title": "Nightjar",
+      "borrowed": "9 April 2026",
+      "returned": "1 May 2026"
+    },
+    {
+      "title": "The Cartographer's Apprentice",
+      "borrowed": "1 May 2026",
+      "returned": "19 May 2026"
+    },
+    {
+      "title": "Bell and Bone",
+      "borrowed": "19 May 2026",
+      "returned": "8 June 2026"
+    },
+    {
+      "title": "A Quiet Inventory",
+      "borrowed": "8 June 2026",
+      "returned": "27 June 2026"
+    }
+  ],
+  "branches": [
+    {
+      "id": "fenner-road",
+      "name": "Fenner Road",
+      "open": true
+    },
+    {
+      "id": "ashcombe",
+      "name": "Ashcombe",
+      "open": true
+    },
+    {
+      "id": "north-quay",
+      "name": "North Quay",
+      "open": false
+    },
+    {
+      "id": "willowbank",
+      "name": "Willowbank",
+      "open": true
+    },
+    {
+      "id": "st-mellick",
+      "name": "St Mellick",
+      "open": true
+    },
+    {
+      "id": "harrow-lane",
+      "name": "Harrow Lane",
+      "open": false
+    },
+    {
+      "id": "cadgwith",
+      "name": "Cadgwith",
+      "open": true
+    },
+    {
+      "id": "penvale",
+      "name": "Penvale",
+      "open": true
+    }
+  ],
+  "monthlyLoans": [
+    {
+      "month": "Jan",
+      "count": 820
+    },
+    {
+      "month": "Feb",
+      "count": 910
+    },
+    {
+      "month": "Mar",
+      "count": 1040
+    },
+    {
+      "month": "Apr",
+      "count": 1150
+    },
+    {
+      "month": "May",
+      "count": 1240
+    },
+    {
+      "month": "Jun",
+      "count": 1080
+    },
+    {
+      "month": "Jul",
+      "count": 930
+    },
+    {
+      "month": "Aug",
+      "count": 780
+    }
+  ],
+  "bulkActions": [
+    {
+      "id": "mark-received",
+      "label": "Mark received"
+    },
+    {
+      "id": "mark-shelved",
+      "label": "Mark shelved"
+    },
+    {
+      "id": "mark-withdrawn",
+      "label": "Mark withdrawn"
+    },
+    {
+      "id": "assign-branch",
+      "label": "Assign branch"
+    },
+    {
+      "id": "assign-shelf",
+      "label": "Assign shelfmark"
+    },
+    {
+      "id": "set-loanable",
+      "label": "Set loanable"
+    },
+    {
+      "id": "set-reference",
+      "label": "Set reference only"
+    },
+    {
+      "id": "extend-loan",
+      "label": "Extend loan period"
+    },
+    {
+      "id": "recall",
+      "label": "Recall from borrower"
+    },
+    {
+      "id": "reserve-hold",
+      "label": "Place staff hold"
+    },
+    {
+      "id": "release-hold",
+      "label": "Release hold"
+    },
+    {
+      "id": "flag-damaged",
+      "label": "Flag as damaged"
+    },
+    {
+      "id": "flag-missing",
+      "label": "Flag as missing"
+    },
+    {
+      "id": "order-replacement",
+      "label": "Order replacement"
+    },
+    {
+      "id": "merge-records",
+      "label": "Merge duplicate records"
+    },
+    {
+      "id": "export-marc",
+      "label": "Export MARC"
+    },
+    {
+      "id": "print-labels",
+      "label": "Print spine labels"
+    },
+    {
+      "id": "print-receipts",
+      "label": "Print receipts"
+    },
+    {
+      "id": "queue-repair",
+      "label": "Send to repair queue"
+    },
+    {
+      "id": "clear-selection",
+      "label": "Clear selection"
+    }
+  ],
+  "profileFields": [
+    {
+      "id": "first-name",
+      "label": "First name",
+      "type": "text"
+    },
+    {
+      "id": "last-name",
+      "label": "Last name",
+      "type": "text"
+    },
+    {
+      "id": "known-as",
+      "label": "Known as",
+      "type": "text"
+    },
+    {
+      "id": "date-of-birth",
+      "label": "Date of birth",
+      "type": "date"
+    },
+    {
+      "id": "email",
+      "label": "Email address",
+      "type": "email"
+    },
+    {
+      "id": "telephone",
+      "label": "Telephone",
+      "type": "tel"
+    },
+    {
+      "id": "address-line-1",
+      "label": "Address line 1",
+      "type": "text"
+    },
+    {
+      "id": "address-line-2",
+      "label": "Address line 2",
+      "type": "text"
+    },
+    {
+      "id": "town",
+      "label": "Town",
+      "type": "text"
+    },
+    {
+      "id": "postcode",
+      "label": "Postcode",
+      "type": "text"
+    },
+    {
+      "id": "card-number",
+      "label": "Membership number",
+      "type": "text"
+    },
+    {
+      "id": "joined-on",
+      "label": "Member since",
+      "type": "date"
+    },
+    {
+      "id": "home-branch",
+      "label": "Home branch",
+      "type": "select",
+      "options": [
+        "Fenner Road",
+        "Ashcombe",
+        "North Quay",
+        "Willowbank"
+      ]
+    },
+    {
+      "id": "reading-interests",
+      "label": "Reading interests",
+      "type": "textarea"
+    },
+    {
+      "id": "access-notes",
+      "label": "Notes for staff",
+      "type": "textarea"
+    }
+  ],
+  "genreCounts": [
+    {
+      "name": "Literary fiction",
+      "count": 4120
+    },
+    {
+      "name": "Crime",
+      "count": 3380
+    },
+    {
+      "name": "Nature writing",
+      "count": 940
+    },
+    {
+      "name": "Travel writing",
+      "count": 760
+    },
+    {
+      "name": "Poetry",
+      "count": 512
+    },
+    {
+      "name": "Historical fiction",
+      "count": 1870
+    },
+    {
+      "name": "Reference",
+      "count": 2240
+    }
+  ],
+  "branchComparison": [
+    {
+      "id": "fenner-road",
+      "name": "Fenner Road",
+      "colour": "#1f6fb4",
+      "counts": [
+        610,
+        640,
+        700,
+        760,
+        810,
+        720,
+        640,
+        520
+      ]
+    },
+    {
+      "id": "ashcombe",
+      "name": "Ashcombe",
+      "colour": "#c0392b",
+      "counts": [
+        140,
+        160,
+        210,
+        240,
+        280,
+        230,
+        190,
+        160
+      ]
+    },
+    {
+      "id": "north-quay",
+      "name": "North Quay",
+      "colour": "#2e7d32",
+      "counts": [
+        70,
+        110,
+        130,
+        150,
+        150,
+        130,
+        100,
+        100
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<p class="lede">Every copy on the shelves, grouped by subject. The column headings stay in view as you
+  scroll.</p>
+
+<div class="title-list with-scroll-margin" id="titles-list">
+  <div class="sticky-head">
+    <div>Title</div>
+    <div>Subject</div>
+    <div>Shelfmark</div>
+  </div>
+  <ul>
+<% shelfList.forEach(function (row) { %>
+    <li>
+      <a id="row-<%= row.id %>" href="/catalogue">
+        <span><%= row.title %></span>
+        <span><%= row.genre %></span>
+        <span><%= row.shelf %></span>
+      </a>
+    </li>
+<% }); %>
+  </ul>
+</div>
+
+<p class="muted">Select a row to see the full record, including the number of copies on loan.</p>

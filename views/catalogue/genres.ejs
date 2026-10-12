@@ -1,0 +1,9 @@
+<p class="lede">How the collection divides up across the main subject headings.</p>
+
+<ul id="genre-list" class="stack">
+<% genreCounts.forEach(function (g) { %>
+  <li><b><%= g.name %></b> — <%= g.count.toLocaleString("en-GB") %> items</li>
+<% }); %>
+</ul>
+
+<p class="muted">Counts include items on loan and items held at other branches.</p>

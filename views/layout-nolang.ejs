@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title %> · Meridian Library</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <div class="head-inner">
+      <a class="brand" href="/">
+        <span>
+          <span class="brand-name">Meridian Library</span>
+          <span class="brand-sub">Fenner Road and county branches</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="/catalogue">Catalogue</a></li>
+          <li><a href="/events/calendar">What's on</a></li>
+          <li><a href="/branches">Branches</a></li>
+          <li><a href="/loans/current">My loans</a></li>
+          <li><a href="/help/faq">Help</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <h1><%= title %></h1>
+    </div>
+    <%- body %>
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-inner">
+      <div class="foot-col">
+        <h2>Borrow</h2>
+        <ul>
+          <li><a href="/catalogue">Browse the catalogue</a></li>
+          <li><a href="/catalogue/new-arrivals">New arrivals</a></li>
+          <li><a href="/loans/current">Items on loan</a></li>
+          <li><a href="/help/borrowing-guide">Borrowing guide</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h2>Visit</h2>
+        <ul>
+          <li><a href="/about/opening-hours">Opening hours</a></li>
+          <li><a href="/branches">Our eight branches</a></li>
+          <li><a href="/about/visit-us">Getting to Fenner Road</a></li>
+          <li><a href="/events/calendar">Events and talks</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h2>Membership</h2>
+        <ul>
+          <li><a href="/account/join">Join the library</a></li>
+          <li><a href="/account/update-details">Update your details</a></li>
+          <li><a href="/about/terms">Terms of membership</a></li>
+          <li><a href="/contact">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h2>Meridian Library</h2>
+        <p>A free public library serving the county since 1897.</p>
+        <p>14 Fenner Road<br>Open Tuesday to Saturday</p>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <div>
+        <p>Registered charity 1042117</p>
+        <p>&copy; 2026 Meridian Library</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

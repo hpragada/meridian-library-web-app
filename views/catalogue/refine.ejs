@@ -1,0 +1,21 @@
+<p class="lede">Narrow the catalogue down to one subject.</p>
+
+<form id="filter-form" action="/catalogue/refine" method="get">
+  <div class="field">
+    <label for="filter-genre">Subject</label>
+    <select id="filter-genre" name="genre">
+      <option value="">All subjects</option>
+<% genreCounts.forEach(function (g) { %>
+      <option value="<%= g.name %>"><%= g.name %></option>
+<% }); %>
+    </select>
+  </div>
+  <button type="submit">Apply</button>
+</form>
+
+<h2>Results</h2>
+<ul class="stack">
+<% books.forEach(function (b) { %>
+  <li><%= b.title %> — <%= b.author %> — <%= b.genre %></li>
+<% }); %>
+</ul>

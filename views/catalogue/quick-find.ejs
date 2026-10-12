@@ -1,0 +1,15 @@
+<p class="lede">Search the catalogue and see what comes back.</p>
+
+<form id="results-form" action="/catalogue/quick-find" method="get">
+  <div class="field">
+    <label for="results-term">Title, author or subject</label>
+    <input id="results-term" type="text" name="q">
+  </div>
+  <button id="results-search" type="button">Search</button>
+</form>
+
+<p id="results-count" class="muted" role="status" aria-live="polite"></p>
+
+<ul id="results-list" class="stack"></ul>
+
+<script src="/js/results.js"></script>

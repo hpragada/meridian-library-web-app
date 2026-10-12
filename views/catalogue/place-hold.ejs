@@ -1,0 +1,25 @@
+<p class="lede">A hold puts you in the queue for the next copy returned to any branch.</p>
+
+<h2>Nightjar</h2>
+<p>Marta Lindqvist · Shelfmark 598 LIN · Two copies across the county, both currently on loan.</p>
+<p><button id="open-reserve" type="button">Place a hold</button></p>
+
+<div id="reserve-dialog" class="dialog" role="dialog" aria-labelledby="reserve-dialog-title" hidden>
+  <h2 id="reserve-dialog-title">Place a hold</h2>
+  <div class="field">
+    <label for="reserve-branch">Collect from</label>
+    <select id="reserve-branch" name="branch">
+      <option>Fenner Road</option>
+      <option>Ashcombe</option>
+      <option>North Quay</option>
+    </select>
+  </div>
+  <div class="dialog-actions">
+    <button id="confirm-reserve" type="button">Confirm</button>
+    <button id="cancel-reserve" type="button" class="secondary">Cancel</button>
+  </div>
+</div>
+
+<p id="reserve-status" class="muted"></p>
+
+<script src="/js/hold-dialog.js"></script>

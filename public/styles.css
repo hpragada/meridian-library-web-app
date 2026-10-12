@@ -1,0 +1,741 @@
+/* Meridian Library — one stylesheet, no build step, no external resources.
+   Colour values are computed, not chosen by eye. Read CONTRIBUTING.md before changing any of
+   them, and run `npm run verify:contrast` afterwards. */
+
+:root {
+  /* surfaces */
+  --ground: #f2f0ea;        /* the page behind the content card */
+  --surface: #ffffff;       /* the content card — every measured ratio is against this */
+  --surface-alt: #f7f5f0;   /* panels and table headings */
+
+  /* ink */
+  --ink: #1a1a1a;           /* 17.40:1 on surface — body text */
+  --ink-soft: #43423f;      /* 10.05:1 on surface — secondary headings */
+  --muted: #666666;         /* 5.74:1 on surface, 5.27:1 on a panel */
+  --faint: #929292;         /* 3.11:1 on surface */
+
+  /* brand */
+  --brand: #14434e;         /* white on this = 10.81:1 */
+  --brand-deep: #0e3038;    /* white on this = 14.01:1 */
+  --brand-soft: #cfdde1;    /* on brand-deep = 10.06:1 — footer secondary text */
+  --link: #0b5fa5;          /* 6.57:1 on surface */
+  --required: #c0392b;      /* 5.44:1 on surface — legible; the issue is colour being the only cue */
+
+  /* lines and shadow */
+  --rule: #ddd9d0;
+  --rule-soft: #eae7e0;
+  --shadow-sm: 0 1px 2px rgba(20, 30, 35, 0.06);
+  --shadow-md: 0 1px 3px rgba(20, 30, 35, 0.07), 0 8px 24px -12px rgba(20, 30, 35, 0.18);
+  --shadow-lg: 0 2px 4px rgba(20, 30, 35, 0.06), 0 24px 48px -24px rgba(20, 30, 35, 0.22);
+
+  /* status tints — ink on each stays above 15:1 */
+  --tint-overdue: #fdecea;
+  --tint-due-soon: #fff8e1;
+  --tint-on-loan: #e8f5e9;
+  --swatch-overdue: #e57373;
+  --swatch-due-soon: #ffb74d;
+  --swatch-on-loan: #81c784;
+
+  /* type */
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --radius: 6px;
+  --shell: 74rem;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 16px/1.65 var(--font-body);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a { color: var(--link); text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--brand-deep);
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  z-index: 20;
+  font-weight: 600;
+}
+.skip:focus { left: 0.5rem; top: 0.5rem; }
+
+/* ── site header ───────────────────────────────────────────────────── */
+
+/* Not sticky. Read CONTRIBUTING.md before changing that. */
+.site-head {
+  background: var(--brand);
+  color: #ffffff;
+  border-bottom: 4px solid var(--brand-deep);
+}
+.head-inner {
+  max-width: var(--shell);
+  margin: 0 auto;
+  padding: 1rem 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* Monogram drawn as a background so the header carries no image element. Empty content, so
+   nothing is announced. Read CONTRIBUTING.md before putting an <img> here. */
+.brand::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: var(--radius);
+  background: #ffffff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%2314434e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 11.5c-3-2.2-6.6-2.8-10.5-2.4v18c3.9-.4 7.5.2 10.5 2.4 3-2.2 6.6-2.8 10.5-2.4v-18c-3.9-.4-7.5.2-10.5 2.4z'/%3E%3Cpath d='M20 11.5v18'/%3E%3C/g%3E%3C/svg%3E") center / 40px 40px no-repeat;
+}
+.brand-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+}
+.brand-sub {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-soft);
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-nav a {
+  display: block;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.site-nav a:hover { background: var(--brand-deep); }
+.site-head :focus-visible { outline-color: #ffffff; }
+
+/* ── content card ──────────────────────────────────────────────────── */
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--shell);
+  margin: 2.25rem auto;
+  padding: 2.5rem 3rem 3rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+}
+
+.page-head {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+main h1 {
+  font-family: var(--font-display);
+  font-size: 2.15rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* `.h2` renders the same as `h2`. Keep the two rules in step. */
+main h2, .h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 2.25rem 0 0.85rem;
+}
+main h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin: 1.75rem 0 0.5rem;
+}
+
+main p { max-width: 62ch; }
+
+.lede {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 58ch;
+  margin: 0 0 1.5rem;
+}
+.muted { color: var(--muted); font-size: 0.95rem; }
+
+/* ── site footer ───────────────────────────────────────────────────── */
+
+.site-foot {
+  background: var(--brand-deep);
+  color: #ffffff;
+  margin-top: auto;
+}
+.foot-inner {
+  max-width: var(--shell);
+  margin: 0 auto;
+  padding: 2.75rem 1.75rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 2rem;
+}
+.foot-col h2 {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-soft);
+  margin: 0 0 0.85rem;
+  font-weight: 700;
+}
+.foot-col ul { list-style: none; margin: 0; padding: 0; }
+.foot-col li + li { margin-top: 0.5rem; }
+.foot-col a { color: #ffffff; text-decoration: none; }
+.foot-col a:hover { text-decoration: underline; }
+.foot-col p { color: var(--brand-soft); margin: 0 0 0.5rem; font-size: 0.95rem; max-width: 26ch; }
+
+.foot-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+.foot-bar div {
+  max-width: var(--shell);
+  margin: 0 auto;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  justify-content: space-between;
+  color: var(--brand-soft);
+  font-size: 0.9rem;
+}
+.foot-bar p { margin: 0; }
+.site-foot :focus-visible { outline-color: #ffffff; }
+
+/* ── cards ─────────────────────────────────────────────────────────── */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+.card {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.card h2, .card h3 { margin-top: 0; }
+.card h3 { font-size: 1.05rem; }
+.card p { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.95rem; max-width: none; }
+.card a { font-weight: 600; text-decoration: none; }
+.card a:hover { text-decoration: underline; }
+
+.hero {
+  background: var(--surface-alt);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 2rem 2.25rem;
+  margin-bottom: 2rem;
+}
+.hero p { margin: 0; }
+.hero .lede { margin-bottom: 1.25rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+/* ── catalogue ─────────────────────────────────────────────────────── */
+
+.covers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 1.75rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.covers img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  background: var(--surface-alt);
+}
+.covers .title { font-weight: 600; margin: 0.7rem 0 0; line-height: 1.35; }
+.covers .author { color: var(--muted); margin: 0.15rem 0 0; font-size: 0.9rem; }
+
+figure { margin: 0 0 1.5rem; width: 13rem; }
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: var(--muted); }
+
+.portrait {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── tables ────────────────────────────────────────────────────────── */
+
+/* The div-built grid below must be visually identical to this. One page uses each. */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 48rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+th, td { text-align: left; padding: 0.75rem 1rem; border-bottom: 1px solid var(--rule-soft); }
+thead th {
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-soft);
+}
+tbody tr:last-child td { border-bottom: none; }
+
+.row-overdue { background: var(--tint-overdue); }
+.row-due-soon { background: var(--tint-due-soon); }
+.row-on-loan { background: var(--tint-on-loan); }
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface-alt);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+.legend li { display: flex; align-items: center; gap: 0.5rem; }
+.swatch {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+.swatch-overdue { background: var(--swatch-overdue); }
+.swatch-due-soon { background: var(--swatch-due-soon); }
+.swatch-on-loan { background: var(--swatch-on-loan); }
+
+/* Grid-based rows styled to match the table rules above. Keep the two in step. */
+.grid-table {
+  max-width: 48rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.grid-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.grid-row:last-child { border-bottom: none; }
+.grid-head {
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+/* ── forms ─────────────────────────────────────────────────────────── */
+
+form { max-width: 36rem; }
+.field { margin-bottom: 1.15rem; }
+.field label { display: block; margin-bottom: 0.35rem; font-weight: 600; font-size: 0.95rem; }
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #9a958c;
+  border-radius: var(--radius);
+  font: inherit;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm) inset;
+}
+input:hover, select:hover, textarea:hover { border-color: var(--ink-soft); }
+textarea { resize: vertical; }
+
+.radio-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+.radio-group label { display: inline; font-weight: 400; margin-left: 0.4rem; }
+
+fieldset {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.25rem;
+}
+legend { font-weight: 700; padding: 0 0.5rem; }
+
+/* Marks a required field. Read CONTRIBUTING.md before changing how it reads. */
+.label-required { color: var(--required); }
+
+/* A field the form has rejected, and the note that sits under one. */
+.field-invalid input, .field-invalid textarea { border-color: var(--required); border-width: 2px; }
+.field-note { margin-top: 0.35rem; font-size: 0.9rem; color: var(--required); font-weight: 600; }
+
+button, .btn {
+  display: inline-block;
+  padding: 0.6rem 1.15rem;
+  border: 1px solid var(--brand);
+  border-radius: var(--radius);
+  background: var(--brand);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+}
+button:hover, .btn:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+button.secondary, .btn.secondary {
+  background: var(--surface);
+  color: var(--brand);
+  border-color: #9a958c;
+}
+button.secondary:hover, .btn.secondary:hover { background: var(--surface-alt); border-color: var(--brand); }
+
+.icon-only {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: var(--surface) url("/assets/icons/bookmark.svg") center / 20px 20px no-repeat;
+  border: 1px solid #9a958c;
+}
+.icon-only:hover { background-color: var(--surface-alt); }
+
+/* ── staff controls ────────────────────────────────────────────────── */
+
+.switch {
+  width: 46px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid #9a958c;
+  border-radius: 13px;
+  background: var(--surface-alt);
+  position: relative;
+  cursor: pointer;
+  box-shadow: none;
+}
+.switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--brand);
+  transition: left 0.12s ease;
+}
+.switch.is-on::after, .switch[aria-checked="true"]::after { left: 23px; }
+.switch.is-on, .switch[aria-checked="true"] { background: var(--brand-soft); }
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 30rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.tabstrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  border-bottom: 1px solid var(--rule);
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.tabstrip a, .tabstrip button {
+  display: block;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--rule);
+  border-bottom: none;
+  background: var(--surface-alt);
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--radius) var(--radius) 0 0;
+  cursor: pointer;
+  box-shadow: none;
+}
+.tabstrip .is-current, .tabstrip [aria-selected="true"] {
+  background: var(--surface);
+  color: var(--ink);
+  position: relative;
+  top: 1px;
+}
+.tabpanel {
+  border: 1px solid var(--rule);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 1.25rem 1.5rem;
+}
+.tabpanel h2 { margin-top: 0; }
+
+/* ── misc blocks ───────────────────────────────────────────────────── */
+
+.panel {
+  background: var(--surface-alt);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.35rem;
+  max-width: 48rem;
+}
+.stack > * + * { margin-top: 0.6rem; }
+
+.chart {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  max-width: 100%;
+  height: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.branch-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.branch-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.dot { display: inline-block; width: 14px; height: 14px; border-radius: 50%; flex: none; }
+.dot-open { background: var(--swatch-on-loan); }
+.dot-closed { background: var(--swatch-overdue); }
+.ring {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--swatch-on-loan);
+  flex: none;
+}
+
+.action-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+/* ── scrolling title list ──────────────────────────────────────────── */
+
+/* The column headings stay at the top of the viewport while the page scrolls. */
+/* Do not put `overflow` on this container. It would become the scroll container for its own
+   sticky child, and the heading row would stop sticking. The corners are rounded on the heading
+   row and the last row instead. */
+.title-list {
+  max-width: 48rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+.title-list .sticky-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-radius: var(--radius) var(--radius) 0 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+.title-list ul { list-style: none; margin: 0; padding: 0; }
+.title-list a {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--rule-soft);
+  color: var(--ink);
+  text-decoration: none;
+}
+.title-list li:last-child a { border-bottom: none; border-radius: 0 0 var(--radius) var(--radius); }
+.title-list a:hover { background: var(--surface-alt); }
+
+/* Reserves room above a row when it is scrolled to, so it comes to rest below the headings. */
+.title-list.with-scroll-margin a { scroll-margin-top: 5rem; }
+
+/* ── popovers and dialogs ──────────────────────────────────────────── */
+
+.popover {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+  padding: 1.15rem;
+  margin-top: 0.6rem;
+  max-width: 22rem;
+}
+.popover p:first-child { margin-top: 0; }
+.dialog {
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+  padding: 1.5rem 1.75rem;
+  margin-top: 1.25rem;
+  max-width: 32rem;
+}
+.dialog h2 { margin-top: 0; }
+.dialog-actions { display: flex; gap: 0.6rem; margin-top: 1.25rem; }
+
+.daygrid { display: grid; grid-template-columns: repeat(7, 2.25rem); gap: 0.3rem; }
+.daygrid button {
+  padding: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--rule);
+  font-weight: 500;
+  box-shadow: none;
+}
+.daygrid button:hover { background: var(--surface-alt); border-color: var(--brand); }
+
+/* ── list focus styling ────────────────────────────────────────────── */
+
+/* Scoped to this one list. Read CONTRIBUTING.md before changing it, and never move either of
+   these rules onto the global :focus-visible selector. */
+.faq-list a:focus, .faq-list a:focus-visible { outline: none; }
+.contact-list a:focus, .contact-list a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--surface), 0 0 0 6px var(--link);
+  border-radius: 2px;
+}
+
+.faq-list, .contact-list { list-style: none; margin: 0; padding: 0; max-width: 44rem; }
+.faq-list li, .contact-list li { border-bottom: 1px solid var(--rule-soft); }
+.faq-list a, .contact-list a {
+  display: block;
+  padding: 0.85rem 0.25rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+.faq-list a:hover, .contact-list a:hover { text-decoration: underline; }
+
+/* ── pagination ────────────────────────────────────────────────────── */
+
+/* Compact pagination. Read CONTRIBUTING.md before changing the size or the spacing. */
+.pager { display: flex; gap: 0; list-style: none; margin: 0; padding: 0; }
+.pager a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid var(--rule);
+  text-decoration: none;
+}
+
+/* ── narrow screens ────────────────────────────────────────────────── */
+
+@media (max-width: 48rem) {
+  main {
+    margin: 1rem;
+    padding: 1.5rem 1.25rem 2rem;
+    border-radius: 8px;
+  }
+  main h1 { font-size: 1.7rem; }
+  .head-inner { padding: 0.85rem 1.25rem; }
+  .site-nav ul { gap: 0.15rem; }
+  .site-nav a { padding: 0.4rem 0.6rem; font-size: 0.95rem; }
+  .hero { padding: 1.5rem 1.25rem; }
+}

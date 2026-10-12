@@ -1,0 +1,16 @@
+<p class="lede">Jump straight to the branch you need.</p>
+
+<h2>Branches</h2>
+<div class="field">
+  <label for="branch-jump">Choose a branch</label>
+  <select id="branch-jump">
+    <option value="" selected>Select a branch…</option>
+<% branches.forEach(function (b) { %>
+    <option value="/branches#<%= b.id %>"><%= b.name %></option>
+<% }); %>
+  </select>
+</div>
+
+<p class="muted">Each branch entry lists today's opening times, parking and step-free access.</p>
+
+<script src="/js/branch-jump.js"></script>

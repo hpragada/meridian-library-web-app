@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320" role="presentation">
+  <rect width="480" height="320" fill="#efe9dd"/>
+  <rect y="236" width="480" height="84" fill="#c6a878"/>
+  <!-- tall windows along the back wall -->
+  <g fill="#dcecf5" stroke="#b9ae97" stroke-width="3">
+    <rect x="42" y="46" width="70" height="150"/>
+    <rect x="206" y="46" width="70" height="150"/>
+    <rect x="370" y="46" width="70" height="150"/>
+  </g>
+  <g stroke="#b9ae97" stroke-width="2">
+    <path d="M77 46 V196 M42 121 H112 M241 46 V196 M206 121 H276 M405 46 V196 M370 121 H440"/>
+  </g>
+  <!-- bookshelves between the windows -->
+  <g fill="#8a6a44">
+    <rect x="130" y="86" width="58" height="150"/>
+    <rect x="294" y="86" width="58" height="150"/>
+  </g>
+  <g fill="#c8b48f">
+    <rect x="136" y="98" width="46" height="8"/><rect x="136" y="130" width="46" height="8"/>
+    <rect x="136" y="162" width="46" height="8"/><rect x="136" y="194" width="46" height="8"/>
+    <rect x="300" y="98" width="46" height="8"/><rect x="300" y="130" width="46" height="8"/>
+    <rect x="300" y="162" width="46" height="8"/><rect x="300" y="194" width="46" height="8"/>
+  </g>
+  <!-- reading tables with lamps -->
+  <rect x="70" y="242" width="150" height="12" fill="#6f5433"/>
+  <rect x="90" y="254" width="10" height="40" fill="#6f5433"/>
+  <rect x="190" y="254" width="10" height="40" fill="#6f5433"/>
+  <rect x="262" y="242" width="150" height="12" fill="#6f5433"/>
+  <rect x="282" y="254" width="10" height="40" fill="#6f5433"/>
+  <rect x="382" y="254" width="10" height="40" fill="#6f5433"/>
+  <g fill="#3f6f52">
+    <path d="M132 242 l14 -22 14 22z"/><path d="M324 242 l14 -22 14 22z"/>
+  </g>
+</svg>

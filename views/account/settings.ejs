@@ -1,0 +1,37 @@
+<p class="lede">Everyday settings for your membership.</p>
+
+<form action="/account/settings" method="post">
+  <div class="field">
+    <label for="settings-branch">Home branch</label>
+    <select id="settings-branch" name="branch" tabindex="3">
+      <option>Fenner Road</option>
+      <option>Ashcombe</option>
+      <option>North Quay</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="settings-language">Preferred language for notices</label>
+    <select id="settings-language" name="language" tabindex="1">
+      <option>English</option>
+      <option>Welsh</option>
+      <option>Polish</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="settings-loan-length">Standard loan length</label>
+    <select id="settings-loan-length" name="loanLength" tabindex="4">
+      <option>Three weeks</option>
+      <option>Two weeks</option>
+      <option>One week</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="settings-reminder">Send a reminder</label>
+    <select id="settings-reminder" name="reminder" tabindex="2">
+      <option>Three days before it is due</option>
+      <option>The day before it is due</option>
+      <option>On the day it is due</option>
+    </select>
+  </div>
+  <button type="submit" tabindex="5">Save settings</button>
+</form>

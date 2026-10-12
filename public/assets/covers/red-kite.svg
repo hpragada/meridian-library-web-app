@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="presentation">
+  <rect width="400" height="600" fill="#cfe0ea"/>
+  <!-- valley seen from above, hazy with distance -->
+  <rect width="400" height="600" fill="#d7e6ee"/>
+  <path d="M0 420 L120 300 L210 380 L300 288 L400 400 V600 H0z" fill="#8ba98c"/>
+  <path d="M0 470 L110 372 L220 448 L320 366 L400 452 V600 H0z" fill="#6d9070" opacity="0.9"/>
+  <path d="M0 540 L130 452 L250 520 L360 448 L400 486 V600 H0z" fill="#54775a"/>
+  <!-- river along the valley floor -->
+  <path d="M40 600 q60 -80 120 -110 q70 -34 160 -70" fill="none" stroke="#9dc3d4" stroke-width="9"
+        stroke-linecap="round"/>
+
+  <!-- the bird, circling: forked tail, angled wings, seen from below -->
+  <g fill="#8c3a24">
+    <path d="M200 214 l-96 -46 q-16 -8 -4 -18 q56 -6 96 44z"/>
+    <path d="M200 214 l96 -46 q16 -8 4 -18 q-56 -6 -96 44z"/>
+    <path d="M192 206 h16 l10 84 -18 -18 -18 18z"/>
+  </g>
+  <g fill="#5e2718">
+    <path d="M186 200 h28 l-4 -18 q-10 -8 -20 0z"/>
+  </g>
+  <!-- shadow on the hillside far below -->
+  <ellipse cx="228" cy="470" rx="26" ry="8" fill="#2f4a35" opacity="0.25"/>
+
+  <text x="200" y="106" font-family="Georgia, serif" font-size="40" fill="#3b2018"
+        text-anchor="middle">Red Kite</text>
+  <text x="200" y="144" font-family="Georgia, serif" font-size="20" fill="#3b2018"
+        opacity="0.85" text-anchor="middle">Dafydd Hallam</text>
+</svg>

@@ -1,0 +1,11 @@
+<p class="lede">Added to the shelves in the last four weeks.</p>
+<ul class="covers">
+<% books.forEach(function (b) { %>
+  <li>
+    <img id="cover-<%= b.id %>" src="/assets/covers/<%= b.id %>.svg" width="200" height="300"
+         alt="cover">
+    <p class="title"><%= b.title %></p>
+    <p class="author"><%= b.author %></p>
+  </li>
+<% }); %>
+</ul>

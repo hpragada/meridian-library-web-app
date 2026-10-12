@@ -1,0 +1,21 @@
+<p class="lede">Everything we hold about your membership. Changes take effect the next working day.</p>
+
+<form action="/account/full-profile" method="post">
+<% profileFields.forEach(function (f) { %>
+  <div class="field">
+    <label for="profile-<%= f.id %>"><%= f.label %></label>
+    <% if (f.type === "select") { %>
+      <select id="profile-<%= f.id %>" name="<%= f.id %>">
+      <% f.options.forEach(function (o) { %>
+        <option><%= o %></option>
+      <% }); %>
+      </select>
+    <% } else if (f.type === "textarea") { %>
+      <textarea id="profile-<%= f.id %>" name="<%= f.id %>" rows="3"></textarea>
+    <% } else { %>
+      <input id="profile-<%= f.id %>" type="<%= f.type %>" name="<%= f.id %>">
+    <% } %>
+  </div>
+<% }); %>
+  <button type="submit">Save profile</button>
+</form>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="presentation">
+  <rect width="400" height="600" fill="#20323f"/>
+  <!-- still water: no waves, only long flat reflections -->
+  <rect y="0" width="400" height="600" fill="#27414f"/>
+  <g stroke="#3a5b6c" stroke-width="2" opacity="0.6">
+    <path d="M0 120 H400 M0 210 H400 M0 300 H400 M0 396 H400 M0 486 H400"/>
+  </g>
+
+  <!-- three folded paper boats -->
+  <g>
+    <path d="M100 210 l100 0 -22 34 -56 0z" fill="#f4f1e8"/>
+    <path d="M124 210 l26 -44 26 44z" fill="#ffffff"/>
+    <path d="M150 166 v44" stroke="#cfc9b8" stroke-width="2"/>
+    <rect x="106" y="248" width="88" height="4" fill="#f4f1e8" opacity="0.35"/>
+  </g>
+  <g>
+    <path d="M212 336 l86 0 -19 30 -48 0z" fill="#f4f1e8"/>
+    <path d="M232 336 l23 -38 23 38z" fill="#ffffff"/>
+    <path d="M255 298 v38" stroke="#cfc9b8" stroke-width="2"/>
+    <rect x="218" y="370" width="74" height="4" fill="#f4f1e8" opacity="0.35"/>
+  </g>
+  <g>
+    <path d="M70 430 l74 0 -16 26 -42 0z" fill="#f4f1e8"/>
+    <path d="M87 430 l20 -33 20 33z" fill="#ffffff"/>
+    <path d="M107 397 v33" stroke="#cfc9b8" stroke-width="2"/>
+    <rect x="75" y="460" width="64" height="4" fill="#f4f1e8" opacity="0.35"/>
+  </g>
+
+  <text x="200" y="530" font-family="Georgia, serif" font-size="34" fill="#ffffff"
+        text-anchor="middle">Paper Boats</text>
+  <text x="200" y="564" font-family="Georgia, serif" font-size="19" fill="#ffffff"
+        opacity="0.85" text-anchor="middle">Ines Moreau</text>
+</svg>

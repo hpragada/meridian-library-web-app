@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="presentation">
+  <rect width="400" height="600" fill="#6b4f2a"/>
+  <!-- wide sky, most of the cover -->
+  <defs><linearGradient id="bigsky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#9dc0dd"/><stop offset="1" stop-color="#e6eef4"/></linearGradient></defs>
+  <rect width="400" height="300" fill="url(#bigsky)"/>
+  <!-- horizon: the field meets the sky in a single flat line -->
+  <rect x="0" y="298" width="400" height="4" fill="#5a4223"/>
+  <!-- ploughed furrows converging towards the horizon -->
+  <g stroke="#4e3a1e" stroke-width="3" fill="none">
+    <path d="M-40 600 L180 302"/>
+    <path d="M60 600 L192 302"/>
+    <path d="M160 600 L200 302"/>
+    <path d="M260 600 L210 302"/>
+    <path d="M360 600 L222 302"/>
+    <path d="M440 600 L236 302"/>
+  </g>
+  <g stroke="#8a6a3a" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M10 600 L186 302"/>
+    <path d="M110 600 L196 302"/>
+    <path d="M210 600 L206 302"/>
+    <path d="M310 600 L216 302"/>
+    <path d="M410 600 L230 302"/>
+  </g>
+  <!-- a single distant tree for scale -->
+  <rect x="330" y="282" width="3" height="18" fill="#3b2c17"/>
+  <circle cx="331" cy="279" r="9" fill="#3b2c17"/>
+
+  <text x="200" y="130" font-family="Georgia, serif" font-size="38" fill="#26364a"
+        text-anchor="middle">Long Field</text>
+  <text x="200" y="170" font-family="Georgia, serif" font-size="20" fill="#26364a"
+        opacity="0.85" text-anchor="middle">Owen Traske</text>
+</svg>

@@ -1,0 +1,25 @@
+<p class="lede">Figures for the current quarter, updated overnight.</p>
+
+<div class="tabstrip" id="report-tabs" role="tablist" aria-label="Quarterly figures" data-strip>
+  <button type="button" role="tab" id="tab-loans" class="is-current"
+          aria-selected="true" aria-controls="panel-loans">Loans</button>
+  <button type="button" role="tab" id="tab-members"
+          aria-selected="false" aria-controls="panel-members" tabindex="-1">Members</button>
+  <button type="button" role="tab" id="tab-stock"
+          aria-selected="false" aria-controls="panel-stock" tabindex="-1">Stock</button>
+</div>
+
+<div class="tabpanel" id="panel-loans" role="tabpanel" aria-labelledby="tab-loans" tabindex="0">
+  <h2>Loans</h2>
+  <p>7,950 items issued so far this year, against 7,410 at the same point last year.</p>
+</div>
+<div class="tabpanel" id="panel-members" role="tabpanel" aria-labelledby="tab-members" tabindex="0" hidden>
+  <h2>Members</h2>
+  <p>1,284 active cards, of which 212 were opened in the last quarter.</p>
+</div>
+<div class="tabpanel" id="panel-stock" role="tabpanel" aria-labelledby="tab-stock" tabindex="0" hidden>
+  <h2>Stock</h2>
+  <p>13,822 items on the shelves, with 340 awaiting repair or replacement.</p>
+</div>
+
+<script src="/js/panels.js"></script>

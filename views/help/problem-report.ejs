@@ -1,0 +1,27 @@
+<p class="lede">Tell us about a damaged or missing item.</p>
+
+<h2>Item details</h2>
+<form action="/help/problem-report" method="post">
+  <div class="field">
+    <label for="problem-item">Item or shelfmark</label>
+    <input id="problem-item" type="text" name="item">
+  </div>
+  <div class="field">
+    <label for="problem-branch">Branch</label>
+    <select id="problem-branch" name="branch">
+      <option>Fenner Road</option>
+      <option>Ashcombe</option>
+      <option>North Quay</option>
+      <option>Willowbank</option>
+    </select>
+  </div>
+  <div class="field field-invalid">
+    <label for="problem-detail">What is wrong</label>
+    <textarea id="problem-detail" name="detail" rows="5" aria-invalid="true" aria-describedby="problem-detail-note"></textarea>
+    <p class="field-note" id="problem-detail-note">Tell us what is wrong with the item.</p>
+  </div>
+  <button type="submit">Send report</button>
+</form>
+
+<p class="muted">Reports go to the branch that holds the item. We do not charge for damage
+  reported before an item is returned.</p>

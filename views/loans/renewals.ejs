@@ -1,0 +1,19 @@
+<p class="lede">Items you can renew today, and items you cannot.</p>
+
+<table id="renewals-table">
+  <thead>
+    <tr><th scope="col">Title</th><th scope="col">Due</th><th scope="col">Renew</th></tr>
+  </thead>
+  <tbody>
+<% loanRows.forEach(function (l, i) { %>
+    <tr>
+      <td><%= l.title %></td>
+      <td><%= l.dueLabel %></td>
+      <td><span id="renew-<%= l.bookId %>" class="<%= i === 0 ? "ring" : "dot dot-open" %>"></span></td>
+    </tr>
+<% }); %>
+  </tbody>
+</table>
+
+<p class="muted">An item reserved by another member cannot be renewed. Bring it back to any branch
+  and we will hold your place in the queue.</p>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320" role="presentation">
+  <rect width="480" height="320" fill="#ece6da"/>
+  <rect y="248" width="480" height="72" fill="#b99a6d"/>
+  <!-- wide map cabinets along the left wall -->
+  <g fill="#7d5f3c">
+    <rect x="24" y="120" width="150" height="128"/>
+    <rect x="186" y="120" width="150" height="128"/>
+  </g>
+  <g fill="#c8b48f">
+    <rect x="32" y="132" width="134" height="14"/><rect x="32" y="156" width="134" height="14"/>
+    <rect x="32" y="180" width="134" height="14"/><rect x="32" y="204" width="134" height="14"/>
+    <rect x="194" y="132" width="134" height="14"/><rect x="194" y="156" width="134" height="14"/>
+    <rect x="194" y="180" width="134" height="14"/><rect x="194" y="204" width="134" height="14"/>
+  </g>
+  <!-- a framed county map on the back wall -->
+  <rect x="352" y="52" width="104" height="86" fill="#f6f2e8" stroke="#8a6a44" stroke-width="5"/>
+  <path d="M368 118 L392 78 L414 100 L440 66" fill="none" stroke="#3f6f52" stroke-width="3"/>
+  <!-- a globe on a stand -->
+  <circle cx="404" cy="196" r="30" fill="#dcecf5" stroke="#b9ae97" stroke-width="3"/>
+  <path d="M374 196 h60 M404 166 v60" stroke="#b9ae97" stroke-width="2"/>
+  <rect x="398" y="226" width="12" height="22" fill="#6f5433"/>
+</svg>

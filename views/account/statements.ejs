@@ -1,0 +1,22 @@
+<p class="lede">Items you have borrowed and returned in the last six months.</p>
+
+<table id="history-table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Borrowed</th>
+      <th scope="col">Returned</th>
+    </tr>
+  </thead>
+  <tbody>
+<% loanHistory.forEach(function (h) { %>
+    <tr>
+      <td><%= h.title %></td>
+      <td><%= h.borrowed %></td>
+      <td><%= h.returned %></td>
+    </tr>
+<% }); %>
+  </tbody>
+</table>
+
+<p class="muted">Loan records older than six months are removed automatically.</p>

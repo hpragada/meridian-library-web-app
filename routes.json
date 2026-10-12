@@ -1,0 +1,481 @@
+{
+  "version": "1.4.0",
+  "base_url": "http://localhost:4180",
+  "routes": [
+    {
+      "path": "/",
+      "title": "Welcome to Meridian Library",
+      "in_scope": true
+    },
+    {
+      "path": "/about/choose-a-branch",
+      "title": "Choose a branch",
+      "in_scope": true
+    },
+    {
+      "path": "/about/find-a-branch",
+      "title": "Find a branch",
+      "in_scope": true
+    },
+    {
+      "path": "/about/history",
+      "title": "A short history",
+      "in_scope": true
+    },
+    {
+      "path": "/about/membership",
+      "title": "Membership",
+      "in_scope": true
+    },
+    {
+      "path": "/about/opening-hours",
+      "title": "Opening hours",
+      "in_scope": true
+    },
+    {
+      "path": "/about/our-buildings",
+      "title": "Our buildings",
+      "in_scope": true
+    },
+    {
+      "path": "/about/reading-rooms",
+      "title": "Reading rooms",
+      "in_scope": true
+    },
+    {
+      "path": "/about/team",
+      "title": "Our team",
+      "in_scope": true
+    },
+    {
+      "path": "/about/terms",
+      "title": "Terms of membership",
+      "in_scope": true
+    },
+    {
+      "path": "/about/visit-us",
+      "title": "Visit us",
+      "in_scope": true
+    },
+    {
+      "path": "/account/apply",
+      "title": "Apply for a card",
+      "in_scope": true
+    },
+    {
+      "path": "/account/card-options",
+      "title": "Card options",
+      "in_scope": true
+    },
+    {
+      "path": "/account/card-services",
+      "title": "Card services",
+      "in_scope": true
+    },
+    {
+      "path": "/account/charges",
+      "title": "Charges on your membership",
+      "in_scope": true
+    },
+    {
+      "path": "/account/full-profile",
+      "title": "Your profile",
+      "in_scope": true
+    },
+    {
+      "path": "/account/join",
+      "title": "Join the library",
+      "in_scope": true
+    },
+    {
+      "path": "/account/loan-history",
+      "title": "Your borrowing",
+      "in_scope": true
+    },
+    {
+      "path": "/account/membership-tools",
+      "title": "Membership tools",
+      "in_scope": true
+    },
+    {
+      "path": "/account/my-loans",
+      "title": "My loans",
+      "in_scope": true
+    },
+    {
+      "path": "/account/notifications",
+      "title": "Notifications",
+      "in_scope": true
+    },
+    {
+      "path": "/account/preferences",
+      "title": "Contact preferences",
+      "in_scope": true
+    },
+    {
+      "path": "/account/register",
+      "title": "Register for a card",
+      "in_scope": true
+    },
+    {
+      "path": "/account/security",
+      "title": "Sign-in and security",
+      "in_scope": true
+    },
+    {
+      "path": "/account/settings",
+      "title": "Account settings",
+      "in_scope": true
+    },
+    {
+      "path": "/account/statement-of-fees",
+      "title": "Statement of fees",
+      "in_scope": true
+    },
+    {
+      "path": "/account/statements",
+      "title": "Borrowing statement",
+      "in_scope": true
+    },
+    {
+      "path": "/account/update-details",
+      "title": "Update your details",
+      "in_scope": true
+    },
+    {
+      "path": "/authors/featured",
+      "title": "Featured author",
+      "in_scope": true
+    },
+    {
+      "path": "/authors/spotlight",
+      "title": "Author spotlight",
+      "in_scope": true
+    },
+    {
+      "path": "/branches",
+      "title": "Our branches",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue",
+      "title": "Browse the catalogue",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/advanced-search",
+      "title": "Advanced search",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/all-titles",
+      "title": "All titles by branch",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/award-winners",
+      "title": "Award winners",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/browse-all",
+      "title": "All titles on the shelves",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/by-subject",
+      "title": "All titles by subject",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/filter",
+      "title": "Filter by subject",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/genres",
+      "title": "Subjects",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/my-searches",
+      "title": "My searches",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/new-arrivals",
+      "title": "New arrivals",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/place-hold",
+      "title": "Place a hold",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/quick-find",
+      "title": "Quick find",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/recommended",
+      "title": "Recommended this month",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/refine",
+      "title": "Refine by subject",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/reserve",
+      "title": "Reserve a copy",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/reserve-copy",
+      "title": "Reserve this copy",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/results",
+      "title": "Search results",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/saved-searches",
+      "title": "Saved searches",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/search",
+      "title": "Search the catalogue",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/staff-picks",
+      "title": "Staff picks",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/subject-index",
+      "title": "Subject index",
+      "in_scope": true
+    },
+    {
+      "path": "/catalogue/subject-list",
+      "title": "Subjects A to Z",
+      "in_scope": true
+    },
+    {
+      "path": "/contact",
+      "title": "Contact us",
+      "in_scope": true
+    },
+    {
+      "path": "/events/book-a-room",
+      "title": "Book a meeting room",
+      "in_scope": true
+    },
+    {
+      "path": "/events/book-a-seat",
+      "title": "Book a seat",
+      "in_scope": true
+    },
+    {
+      "path": "/events/book-club",
+      "title": "Book club",
+      "in_scope": true
+    },
+    {
+      "path": "/events/calendar",
+      "title": "What's on",
+      "in_scope": true
+    },
+    {
+      "path": "/events/classes",
+      "title": "Classes and courses",
+      "in_scope": true
+    },
+    {
+      "path": "/events/summer-reading",
+      "title": "Summer reading challenge",
+      "in_scope": true
+    },
+    {
+      "path": "/events/tickets",
+      "title": "Tickets",
+      "in_scope": true
+    },
+    {
+      "path": "/events/workshops",
+      "title": "Workshops",
+      "in_scope": true
+    },
+    {
+      "path": "/health",
+      "title": "Health",
+      "in_scope": false
+    },
+    {
+      "path": "/help/borrowing-guide",
+      "title": "Borrowing guide",
+      "in_scope": true
+    },
+    {
+      "path": "/help/contact-us",
+      "title": "Ways to reach us",
+      "in_scope": true
+    },
+    {
+      "path": "/help/faq",
+      "title": "Common questions",
+      "in_scope": true
+    },
+    {
+      "path": "/help/getting-started",
+      "title": "Getting started",
+      "in_scope": true
+    },
+    {
+      "path": "/help/membership-actions",
+      "title": "Membership actions",
+      "in_scope": true
+    },
+    {
+      "path": "/help/problem-report",
+      "title": "Report a problem with an item",
+      "in_scope": true
+    },
+    {
+      "path": "/help/report-a-problem",
+      "title": "Report a problem",
+      "in_scope": true
+    },
+    {
+      "path": "/loans/current",
+      "title": "Current loans",
+      "in_scope": true
+    },
+    {
+      "path": "/loans/history",
+      "title": "Loan history",
+      "in_scope": true
+    },
+    {
+      "path": "/loans/renewals",
+      "title": "Renewals",
+      "in_scope": true
+    },
+    {
+      "path": "/newsletter",
+      "title": "Newsletter",
+      "in_scope": true
+    },
+    {
+      "path": "/reports/annual-review",
+      "title": "Annual review",
+      "in_scope": true
+    },
+    {
+      "path": "/reports/borrowing-trends",
+      "title": "Borrowing trends",
+      "in_scope": true
+    },
+    {
+      "path": "/reports/branch-comparison",
+      "title": "Branch comparison",
+      "in_scope": true
+    },
+    {
+      "path": "/reports/holdings-by-branch",
+      "title": "Holdings by branch",
+      "in_scope": true
+    },
+    {
+      "path": "/reports/issue-figures",
+      "title": "Issue figures",
+      "in_scope": true
+    },
+    {
+      "path": "/reports/lending-summary",
+      "title": "Lending summary",
+      "in_scope": true
+    },
+    {
+      "path": "/reports/loan-figures",
+      "title": "Loan figures",
+      "in_scope": true
+    },
+    {
+      "path": "/reports/monthly-issues",
+      "title": "Monthly issues",
+      "in_scope": true
+    },
+    {
+      "path": "/reports/stock-levels",
+      "title": "Stock levels",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/branch-settings",
+      "title": "Branch settings",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/bulk-actions",
+      "title": "Bulk actions",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/catalogue-entry",
+      "title": "Catalogue entry",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/display-options",
+      "title": "Display options",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/exports",
+      "title": "Exports",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/overview",
+      "title": "Staff overview",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/quick-edit",
+      "title": "Quick edit",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/reports",
+      "title": "Staff reports",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/rota",
+      "title": "Staff rota",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/shelf-audit",
+      "title": "Shelf audit",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/shelf-settings",
+      "title": "Shelf settings",
+      "in_scope": true
+    },
+    {
+      "path": "/staff/staffing-plan",
+      "title": "Staffing plan",
+      "in_scope": true
+    }
+  ]
+}

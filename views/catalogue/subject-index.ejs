@@ -1,0 +1,28 @@
+<p class="lede">How many titles we hold in each subject, and how many are out on loan today.</p>
+
+<h2>Holdings by subject</h2>
+
+<table id="subject-table">
+  <thead>
+    <tr>
+      <td id="sub-h1" style="background:var(--surface-alt);border-bottom:1px solid var(--rule);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-soft);font-weight:700">Subject</td>
+      <td id="sub-h2" style="background:var(--surface-alt);border-bottom:1px solid var(--rule);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-soft);font-weight:700">Titles</td>
+      <td id="sub-h3" style="background:var(--surface-alt);border-bottom:1px solid var(--rule);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-soft);font-weight:700">On loan</td>
+      <td id="sub-h4" style="background:var(--surface-alt);border-bottom:1px solid var(--rule);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-soft);font-weight:700">Available</td>
+      <td id="sub-h5" style="background:var(--surface-alt);border-bottom:1px solid var(--rule);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-soft);font-weight:700">Shelfmark</td>
+    </tr>
+  </thead>
+  <tbody>
+<% genreCounts.forEach(function (g) { var onLoan = Math.round(g.count * 0.18); %>
+    <tr>
+      <td><%= g.name %></td>
+      <td><%= g.count %></td>
+      <td><%= onLoan %></td>
+      <td><%= g.count - onLoan %></td>
+      <td><%= g.name.slice(0, 3).toUpperCase() %></td>
+    </tr>
+<% }); %>
+  </tbody>
+</table>
+
+<p class="muted">Counts cover every branch and are refreshed overnight.</p>

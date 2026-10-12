@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" width="240" height="300" role="presentation">
+  <rect width="240" height="300" fill="#d9dfe2"/>
+  <!-- festival backdrop: marquee stripes -->
+  <g fill="#c3ccd2"><rect x="0" y="0" width="30" height="300"/><rect x="60" y="0" width="30" height="300"/>
+  <rect x="120" y="0" width="30" height="300"/><rect x="180" y="0" width="30" height="300"/></g>
+  <!-- shoulders -->
+  <path d="M46 300 C46 232 84 210 120 210 C156 210 194 232 194 300 Z" fill="#3f4a58"/>
+  <path d="M108 210 h24 v22 h-24z" fill="#e8c6a8"/>
+  <!-- head -->
+  <ellipse cx="120" cy="152" rx="48" ry="58" fill="#e8c6a8"/>
+  <!-- hair -->
+  <path d="M120 88 C82 88 68 118 70 152 C74 132 84 122 96 118 C112 130 142 132 162 120
+           C172 128 172 142 170 152 C174 116 158 88 120 88 Z" fill="#5b4636"/>
+  <!-- features -->
+  <circle cx="102" cy="150" r="4.5" fill="#33291f"/>
+  <circle cx="138" cy="150" r="4.5" fill="#33291f"/>
+  <path d="M104 176 q16 12 32 0" fill="none" stroke="#a9755a" stroke-width="3" stroke-linecap="round"/>
+  <!-- lanyard, so the setting reads as an event -->
+  <path d="M104 232 L120 262 L136 232" fill="none" stroke="#b4423a" stroke-width="4"/>
+  <rect x="110" y="262" width="20" height="14" rx="2" fill="#f2efe8" stroke="#b4423a" stroke-width="2"/>
+</svg>

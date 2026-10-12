@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="presentation">
+  <rect width="400" height="600" fill="#e7ecf1"/>
+  <!-- overcast winter sky -->
+  <rect width="400" height="340" fill="#cfd8e2"/>
+  <!-- snow on the ground -->
+  <path d="M0 330 q100 -18 200 0 q100 18 200 0 v270 H0z" fill="#f7fafc"/>
+  <!-- bare fruit trees, no leaves -->
+  <g stroke="#4a3f36" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M70 350 V250"/>
+    <path d="M70 292 l-26 -34 M70 300 l28 -38 M70 268 l-18 -28 M70 262 l20 -26"/>
+    <path d="M200 356 V236"/>
+    <path d="M200 286 l-32 -40 M200 296 l34 -44 M200 258 l-22 -30 M200 250 l24 -30"/>
+    <path d="M330 350 V254"/>
+    <path d="M330 296 l-28 -36 M330 302 l30 -38 M330 272 l-20 -26 M330 266 l22 -26"/>
+  </g>
+  <!-- snow caught on the branches -->
+  <g fill="#ffffff" opacity="0.9">
+    <rect x="40" y="254" width="24" height="5" rx="2.5"/>
+    <rect x="168" y="242" width="28" height="5" rx="2.5"/>
+    <rect x="300" y="256" width="26" height="5" rx="2.5"/>
+  </g>
+  <!-- drifts -->
+  <ellipse cx="70" cy="352" rx="46" ry="12" fill="#ffffff"/>
+  <ellipse cx="200" cy="358" rx="52" ry="13" fill="#ffffff"/>
+  <ellipse cx="330" cy="352" rx="46" ry="12" fill="#ffffff"/>
+
+  <text x="200" y="470" font-family="Georgia, serif" font-size="32" fill="#2b3a4a"
+        text-anchor="middle">The Winter Orchard</text>
+  <text x="200" y="508" font-family="Georgia, serif" font-size="20" fill="#2b3a4a"
+        opacity="0.8" text-anchor="middle">Nell Ferrier</text>
+</svg>

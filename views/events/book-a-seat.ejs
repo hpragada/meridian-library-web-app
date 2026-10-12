@@ -1,0 +1,28 @@
+<p class="lede">Seats for the Thursday evening talks are free but must be reserved.</p>
+
+<form action="/events/book-a-seat" method="post">
+  <div class="field">
+    <label for="room-name">Booked by</label>
+    <input id="room-name" type="text" name="name">
+  </div>
+
+  <div class="field">
+    <label for="room-date">Date</label>
+    <input id="room-date" type="text" name="date" value="18 September 2026" readonly>
+    <p><button id="room-date-open" type="button" class="secondary">Choose a date</button></p>
+    <div id="room-date-picker" class="popover" hidden>
+      <p id="room-picker-month"><strong>September 2026</strong></p>
+      <div class="daygrid" id="room-daygrid"></div>
+      <p><button id="room-date-done" type="button">Done</button></p>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="room-notes">Anything we should know</label>
+    <textarea id="room-notes" name="notes" rows="3"></textarea>
+  </div>
+
+  <button type="submit">Reserve a seat</button>
+</form>
+
+<script src="/js/date-picker.js"></script>

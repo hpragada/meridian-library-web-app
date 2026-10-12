@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="presentation">
+  <rect width="400" height="600" fill="#e6e2da"/>
+  
+  <rect width="400" height="600" fill="#efece6"/>
+  <!-- empty room: back wall, skirting, floor -->
+  <rect y="330" width="400" height="270" fill="#d8cfc0"/>
+  <rect y="322" width="400" height="10" fill="#c4b9a6"/>
+  <!-- a bare window on the back wall -->
+  <rect x="286" y="120" width="80" height="110" fill="#f8f6f2" stroke="#c4b9a6" stroke-width="3"/>
+  <path d="M326 120 V230 M286 175 H366" stroke="#c4b9a6" stroke-width="3"/>
+  <!-- stacked cardboard boxes -->
+  <g stroke="#a98f68" stroke-width="3">
+    <rect x="70" y="236" width="118" height="94" fill="#cba97c"/>
+    <path d="M129 236 V330"/>
+    <rect x="60" y="330" width="138" height="104" fill="#c19d6d"/>
+    <path d="M129 330 V434"/>
+    <rect x="196" y="292" width="112" height="142" fill="#cba97c"/>
+    <path d="M252 292 V434"/>
+    <rect x="104" y="176" width="80" height="60" fill="#d6b78c"/>
+    <path d="M144 176 V236"/>
+  </g>
+  <!-- tape strips -->
+  <g fill="#efe3cf" opacity="0.85">
+    <rect x="122" y="236" width="14" height="94"/>
+    <rect x="122" y="330" width="14" height="104"/>
+    <rect x="245" y="292" width="14" height="142"/>
+  </g>
+
+  <text x="200" y="500" font-family="Georgia, serif" font-size="34" fill="#3a3225"
+        text-anchor="middle">A Quiet Inventory</text>
+  <text x="200" y="536" font-family="Georgia, serif" font-size="20" fill="#3a3225"
+        opacity="0.85" text-anchor="middle">Priya Raghunathan</text>
+</svg>

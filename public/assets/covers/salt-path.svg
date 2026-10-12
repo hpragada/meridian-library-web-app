@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="presentation">
+  <rect width="400" height="600" fill="#e8d7a2"/>
+  
+  <rect width="400" height="230" fill="#cfe0ea"/>
+  <circle cx="316" cy="70" r="34" fill="#fdf3d0"/>
+  <rect y="230" width="400" height="370" fill="#e0c775"/>
+  <!-- wheat field texture -->
+  <g stroke="#c9ac57" stroke-width="3">
+    <path d="M12 600 V300 M40 600 V318 M68 600 V296 M96 600 V322 M124 600 V304"/>
+    <path d="M276 600 V304 M304 600 V322 M332 600 V296 M360 600 V318 M388 600 V300"/>
+  </g>
+  <!-- dirt road receding to the horizon -->
+  <path d="M170 230 L230 230 L330 600 L70 600 Z" fill="#b9915f"/>
+  <path d="M186 230 L214 230 L236 600 L164 600 Z" fill="#a8814f" opacity="0.55"/>
+  <!-- wheel ruts -->
+  <path d="M178 260 L150 600" stroke="#96703f" stroke-width="4" fill="none"/>
+  <path d="M222 260 L250 600" stroke="#96703f" stroke-width="4" fill="none"/>
+
+  <text x="200" y="500" font-family="Georgia, serif" font-size="34" fill="#3a2f16"
+        text-anchor="middle">The Salt Path Home</text>
+  <text x="200" y="536" font-family="Georgia, serif" font-size="20" fill="#3a2f16"
+        opacity="0.85" text-anchor="middle">Idris Okonkwo</text>
+</svg>

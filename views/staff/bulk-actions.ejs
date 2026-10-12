@@ -1,0 +1,10 @@
+<p class="lede">Apply an action to every record selected in the catalogue list.</p>
+
+<h2>Actions</h2>
+<ul class="action-list">
+<% bulkActions.forEach(function (a) { %>
+  <li><button id="action-<%= a.id %>" type="button" class="secondary"><%= a.label %></button></li>
+<% }); %>
+</ul>
+
+<p class="muted">Actions are applied immediately and are recorded against your staff account.</p>

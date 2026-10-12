@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320" role="presentation">
+  <rect width="480" height="320" fill="#cdd6dd"/>
+  <rect y="248" width="480" height="72" fill="#b6ada0"/>
+  <!-- two-storey brick facade -->
+  <rect x="70" y="70" width="340" height="180" fill="#a4562f"/>
+  <rect x="70" y="70" width="340" height="12" fill="#8a4525"/>
+  <path d="M70 70 L240 22 L410 70 Z" fill="#7c3f22"/>
+  <!-- upper arched windows -->
+  <g fill="#e8eef2" stroke="#7c3f22" stroke-width="3">
+    <path d="M112 170 v-38 a20 20 0 0 1 40 0 v38 z"/>
+    <path d="M188 170 v-38 a20 20 0 0 1 40 0 v38 z"/>
+    <path d="M264 170 v-38 a20 20 0 0 1 40 0 v38 z"/>
+    <path d="M340 170 v-38 a20 20 0 0 1 40 0 v38 z"/>
+  </g>
+  <!-- ground floor arched openings -->
+  <g fill="#e8eef2" stroke="#7c3f22" stroke-width="3">
+    <path d="M112 250 v-48 a20 20 0 0 1 40 0 v48 z"/>
+    <path d="M264 250 v-48 a20 20 0 0 1 40 0 v48 z"/>
+    <path d="M340 250 v-48 a20 20 0 0 1 40 0 v48 z"/>
+  </g>
+  <!-- arched doorway -->
+  <path d="M188 250 v-58 a20 20 0 0 1 40 0 v58 z" fill="#5c3a20" stroke="#7c3f22" stroke-width="3"/>
+  <rect x="66" y="246" width="348" height="8" fill="#8a4525"/>
+</svg>

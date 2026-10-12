@@ -1,0 +1,59 @@
+<%
+// The heading cells are styled to read as headings and marked up as ordinary cells. Held in one
+// variable so the three tables cannot drift apart visually while the markup stays the same.
+var HEAD = 'style="background:var(--surface-alt);border-bottom:1px solid var(--rule);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-soft);font-weight:700"';
+%>
+<p class="lede">Issues, renewals and reservations by quarter across the whole county.</p>
+
+<h2>January to March</h2>
+<table id="issues-q1">
+  <thead>
+    <tr>
+      <td id="q1-h1" <%- HEAD %>>Month</td>
+      <td id="q1-h2" <%- HEAD %>>Issues</td>
+      <td id="q1-h3" <%- HEAD %>>Renewals</td>
+      <td id="q1-h4" <%- HEAD %>>Reservations</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>January</td><td>8,412</td><td>2,104</td><td>631</td></tr>
+    <tr><td>February</td><td>7,988</td><td>1,976</td><td>604</td></tr>
+    <tr><td>March</td><td>9,120</td><td>2,318</td><td>702</td></tr>
+  </tbody>
+</table>
+
+<h2>April to June</h2>
+<table id="issues-q2">
+  <thead>
+    <tr>
+      <td id="q2-h1" <%- HEAD %>>Month</td>
+      <td id="q2-h2" <%- HEAD %>>Issues</td>
+      <td id="q2-h3" <%- HEAD %>>Renewals</td>
+      <td id="q2-h4" <%- HEAD %>>Reservations</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>April</td><td>9,604</td><td>2,441</td><td>755</td></tr>
+    <tr><td>May</td><td>10,233</td><td>2,690</td><td>812</td></tr>
+    <tr><td>June</td><td>9,877</td><td>2,512</td><td>780</td></tr>
+  </tbody>
+</table>
+
+<h2>July to September</h2>
+<table id="issues-q3">
+  <thead>
+    <tr>
+      <td id="q3-h1" <%- HEAD %>>Month</td>
+      <td id="q3-h2" <%- HEAD %>>Issues</td>
+      <td id="q3-h3" <%- HEAD %>>Renewals</td>
+      <td id="q3-h4" <%- HEAD %>>Reservations</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>July</td><td>11,046</td><td>2,884</td><td>903</td></tr>
+    <tr><td>August</td><td>10,512</td><td>2,733</td><td>861</td></tr>
+    <tr><td>September</td><td>9,340</td><td>2,401</td><td>744</td></tr>
+  </tbody>
+</table>
+
+<p class="muted">Figures are drawn from the circulation system on the first of each month.</p>

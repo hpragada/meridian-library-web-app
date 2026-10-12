@@ -1,0 +1,31 @@
+<p class="lede">Sections checked during this month's shelf audit.</p>
+
+<h2>Shelf sections</h2>
+<div class="switch-row">
+  <span id="label-shelf-fiction">Fiction</span>
+  <button type="button" id="shelf-fiction" class="switch" role="switch"
+          aria-checked="true" aria-labelledby="label-shelf-fiction"
+          onclick="toggleSwitch(this)"></button>
+</div>
+<div class="switch-row">
+  <span id="label-shelf-reference">Reference</span>
+  <button type="button" id="shelf-reference" class="switch" role="switch"
+          aria-checked="true" aria-labelledby="label-shelf-reference"
+          onclick="toggleSwitch(this)"></button>
+</div>
+<div class="switch-row">
+  <span id="label-shelf-childrens">Children's</span>
+  <button type="button" id="shelf-childrens" class="switch" role="switch"
+          aria-checked="false" aria-labelledby="label-shelf-childrens"
+          onclick="toggleSwitch(this)"></button>
+</div>
+<div class="switch-row">
+  <span id="label-shelf-local">Local history</span>
+  <button type="button" id="shelf-local" class="switch" role="switch"
+          aria-checked="true" aria-labelledby="label-shelf-local"
+          onclick="toggleSwitch(this)"></button>
+</div>
+
+<p class="muted">Sections left unchecked roll over to next month's audit list.</p>
+
+<script src="/js/staff-controls.js"></script>

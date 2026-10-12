@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="presentation">
+  <rect width="600" height="360" fill="#ffffff"/>
+  <text x="300" y="28" font-size="16" font-weight="600" fill="#1a1a1a" text-anchor="middle">Loans per month, 2026</text>
+  <line x1="60" y1="300" x2="576" y2="300" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="60" y1="52" x2="60" y2="300" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="34" y="60" font-size="12" fill="#1a1a1a" text-anchor="end">1250</text>
+  <text x="34" y="304" font-size="12" fill="#1a1a1a" text-anchor="end">0</text>
+  <rect x="70" y="148" width="42" height="152" fill="#4a6f8a"/>
+  <text x="91" y="322" font-size="14" fill="#1a1a1a" text-anchor="middle">Jan</text>
+  <rect x="132" y="131" width="42" height="169" fill="#4a6f8a"/>
+  <text x="153" y="322" font-size="14" fill="#1a1a1a" text-anchor="middle">Feb</text>
+  <rect x="194" y="107" width="42" height="193" fill="#4a6f8a"/>
+  <text x="215" y="322" font-size="14" fill="#1a1a1a" text-anchor="middle">Mar</text>
+  <rect x="256" y="87" width="42" height="213" fill="#4a6f8a"/>
+  <text x="277" y="322" font-size="14" fill="#1a1a1a" text-anchor="middle">Apr</text>
+  <rect x="318" y="70" width="42" height="230" fill="#4a6f8a"/>
+  <text x="339" y="322" font-size="14" fill="#1a1a1a" text-anchor="middle">May</text>
+  <rect x="380" y="100" width="42" height="200" fill="#4a6f8a"/>
+  <text x="401" y="322" font-size="14" fill="#1a1a1a" text-anchor="middle">Jun</text>
+  <rect x="442" y="128" width="42" height="172" fill="#4a6f8a"/>
+  <text x="463" y="322" font-size="14" fill="#1a1a1a" text-anchor="middle">Jul</text>
+  <rect x="504" y="155" width="42" height="145" fill="#4a6f8a"/>
+  <text x="525" y="322" font-size="14" fill="#1a1a1a" text-anchor="middle">Aug</text>
+</svg>

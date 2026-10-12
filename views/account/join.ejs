@@ -1,0 +1,25 @@
+<p class="lede">Membership is free for anyone living, working or studying in the county.</p>
+
+<form action="/account/join" method="post">
+  <div class="field">
+    <label class="label-required" for="join-name">Full name</label>
+    <input id="join-name" type="text" name="name">
+  </div>
+  <div class="field">
+    <label class="label-required" for="join-dob">Date of birth</label>
+    <input id="join-dob" type="date" name="dob">
+  </div>
+  <div class="field">
+    <label for="join-email">Email address</label>
+    <input id="join-email" type="email" name="email">
+  </div>
+  <div class="field">
+    <label for="join-address">Address</label>
+    <input id="join-address" type="text" name="address">
+  </div>
+  <div class="field">
+    <label class="label-required" for="join-postcode">Postcode</label>
+    <input id="join-postcode" type="text" name="postcode">
+  </div>
+  <button type="submit">Send application</button>
+</form>

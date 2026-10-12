@@ -1,0 +1,18 @@
+<p class="lede">Loans recorded across all eight branches, January to August.</p>
+
+<img id="chart-borrowing" src="/assets/charts/lending-2026.svg" width="600" height="360"
+     alt="Monthly loans in 2026: a rise from January to a May peak of 1,240, then a decline to 780 in August">
+<p><a href="#borrowing-figures">Full figures for 2026</a></p>
+
+<p>Borrowing followed the pattern of previous years, with the spring term accounting for most of
+  the increase.</p>
+
+<h2 id="borrowing-figures">Full figures for 2026</h2>
+<table>
+  <thead><tr><th scope="col">Month</th><th scope="col">Loans</th></tr></thead>
+  <tbody>
+<% monthlyLoans.forEach(function (m) { %>
+    <tr><td><%= m.month %></td><td><%= m.count.toLocaleString("en-GB") %></td></tr>
+<% }); %>
+  </tbody>
+</table>

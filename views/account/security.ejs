@@ -1,0 +1,29 @@
+<p class="lede">Settings that control how you sign in and who may borrow on your card.</p>
+
+<form action="/account/security" method="post">
+  <div class="field">
+    <label for="security-question">Security question</label>
+    <select id="security-question" name="question">
+      <option>The street you grew up on</option>
+      <option>The name of your first school</option>
+      <option>Your mother's maiden name</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="security-answer">Answer</label>
+    <input id="security-answer" type="text" name="answer">
+  </div>
+  <div class="field">
+    <label for="security-proxy">Someone who may borrow on your card</label>
+    <input id="security-proxy" type="text" name="proxy">
+  </div>
+  <div class="field">
+    <label for="security-signout">Sign out of shared machines</label>
+    <select id="security-signout" name="signout">
+      <option>After fifteen minutes</option>
+      <option>After five minutes</option>
+      <option>When I close the browser</option>
+    </select>
+  </div>
+  <button type="submit">Save settings</button>
+</form>

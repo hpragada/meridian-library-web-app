@@ -1,0 +1,14 @@
+<p class="lede">Eight branches across the county. Opening times vary during school holidays.</p>
+
+<h2>Today</h2>
+<ul class="branch-list">
+<% branches.forEach(function (b) { %>
+  <li>
+    <span id="status-<%= b.id %>" class="dot <%= b.open ? "dot-open" : "dot-closed" %>"></span>
+    <span><%= b.name %> — <%= b.open ? "open" : "closed" %></span>
+  </li>
+<% }); %>
+</ul>
+
+<p class="muted">A branch shown as closed today may still accept returns through its external
+  book drop.</p>

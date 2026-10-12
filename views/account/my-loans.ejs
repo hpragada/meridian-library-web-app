@@ -1,0 +1,16 @@
+<p class="lede">Three items are issued on your card.</p>
+
+<table id="my-loans-table">
+  <thead>
+    <tr><th scope="col">Title</th><th scope="col">Due</th></tr>
+  </thead>
+  <tbody>
+<% loanRows.forEach(function (l) { %>
+    <tr><td><%= l.title %></td><td><%= l.dueLabel %></td></tr>
+<% }); %>
+  </tbody>
+</table>
+
+<p><button id="renew-all" type="button" aria-label="Renew all loans">Renew</button></p>
+
+<p class="muted">Renewing runs for three weeks from today, not from the current due date.</p>

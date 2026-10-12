@@ -1,0 +1,48 @@
+<%
+  // Same geometry as the other branch chart. Each series also carries a dash pattern and a label
+  // at the end of its line, so the series can be told apart in greyscale or in print.
+  var X0 = 70, X1 = 520, YTOP = 40, YBASE = 290, SCALE = 900;
+  var DASH = ["none", "10 6", "2 5"];
+  var x = function (i) { return Math.round(X0 + i * ((X1 - X0) / (monthlyLoans.length - 1))); };
+  var y = function (v) { return Math.round(YBASE - (v / SCALE) * (YBASE - YTOP)); };
+%>
+<p class="lede">Loans issued at our three largest branches, January to August.</p>
+
+<svg class="chart" width="640" height="340" viewBox="0 0 640 340" role="img"
+     aria-label="Loans by branch, January to August. Fenner Road rises from 610 in January to 810 in May and falls to 520 in August. Ashcombe rises from 140 to 280 in May and falls to 160. North Quay rises from 70 to 150 in May and falls to 100.">
+  <rect x="0" y="0" width="640" height="340" fill="#ffffff"/>
+  <g stroke="#d9d9d9" stroke-width="1">
+<% [0, 300, 600, 900].forEach(function (v) { %>
+    <line x1="<%= X0 %>" y1="<%= y(v) %>" x2="<%= X1 %>" y2="<%= y(v) %>"/>
+<% }); %>
+  </g>
+  <g fill="#1a1a1a" font-family="system-ui, sans-serif" font-size="12">
+<% [0, 300, 600, 900].forEach(function (v) { %>
+    <text x="<%= X0 - 10 %>" y="<%= y(v) + 4 %>" text-anchor="end"><%= v %></text>
+<% }); %>
+<% monthlyLoans.forEach(function (m, i) { %>
+    <text x="<%= x(i) %>" y="<%= YBASE + 20 %>" text-anchor="middle"><%= m.month %></text>
+<% }); %>
+  </g>
+<% branchComparison.forEach(function (b, n) { %>
+  <polyline fill="none" stroke="<%= b.colour %>" stroke-width="3"
+            stroke-dasharray="<%= DASH[n] %>"
+            points="<%= b.counts.map(function (c, i) { return x(i) + "," + y(c); }).join(" ") %>"/>
+  <text x="<%= X1 + 8 %>" y="<%= y(b.counts[b.counts.length - 1]) + 4 %>"
+        font-family="system-ui, sans-serif" font-size="12" fill="#1a1a1a"><%= b.name %></text>
+<% }); %>
+</svg>
+
+<ul class="legend" id="branch-legend">
+<% branchComparison.forEach(function (b, n) { %>
+  <li>
+    <svg width="28" height="12" viewBox="0 0 28 12" aria-hidden="true" focusable="false">
+      <line x1="0" y1="6" x2="28" y2="6" stroke="<%= b.colour %>" stroke-width="3"
+            stroke-dasharray="<%= DASH[n] %>"/>
+    </svg>
+    <%= b.name %> — <%= DASH[n] === "none" ? "solid line" : (DASH[n] === "10 6" ? "dashed line" : "dotted line") %>
+  </li>
+<% }); %>
+</ul>
+
+<p class="muted">Figures exclude renewals and items issued through the self-service machines.</p>

@@ -1,0 +1,22 @@
+<p class="lede">Choose how we get in touch about reservations and overdue items.</p>
+
+<form action="/account/preferences" method="post">
+  <fieldset>
+    <legend>Notify me by</legend>
+    <div class="radio-group" id="notify-group">
+      <div>
+        <input type="radio" id="notify-email" name="notify" value="email" checked>
+        <label for="notify-email">Email</label>
+      </div>
+      <div>
+        <input type="radio" id="notify-post" name="notify" value="post">
+        <label for="notify-post">Post</label>
+      </div>
+      <div>
+        <input type="radio" id="notify-none" name="notify" value="none">
+        <label for="notify-none">Do not contact me</label>
+      </div>
+    </div>
+  </fieldset>
+  <button type="submit">Save</button>
+</form>
